@@ -3,6 +3,7 @@ import 'package:flutter_tts/flutter_tts.dart';
 class TTSService {
   final FlutterTts _tts = FlutterTts();
   
+  // Constructor y ajustes del motor de voz (idioma español, velocidad, volumen).
   TTSService() {
     _initTTS();
   }
@@ -14,6 +15,7 @@ class TTSService {
     await _tts.setPitch(1.0);
   }
 
+  // Funciones públicas para reproducir texto o detener el audio en curso.
   Future<void> speak(String text) async {
     await _tts.speak(text);
   }
